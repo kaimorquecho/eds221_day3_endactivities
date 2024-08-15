@@ -1,0 +1,107 @@
+---
+title: "conditionals_loops.qmd"
+author: "kaiju"
+format: html
+---
+
+```{r}
+# Task 1 ----
+# Write an if - else if - else statement that returns “Low to moderate risk” if pm2_5 (for Particulate Matter 2.5) is less than 100, “Unhealthy for sensitive groups” if PM 2.5 is 100 <= pm2_5 < 150, and “Health risk present” if PM 2.5 is >= 150. ----
+
+pm2_5 <- 400
+
+if (pm2_5 < 100){
+print("low to moderate risk")
+} else if (pm2_5 >= 100 & pm2_5 < 150) {
+print("unhealthy for sensitive groups")
+} else if(pm2_5 >= 150) {
+print("health risk present")
+}
+```
+```{r}
+# Task 2 ----
+library(stringr)
+species <- "blue whale"
+
+if (str_detect(species,"blue whale")){
+  print("You found a whale!")
+} else{
+  print("")
+}
+
+
+
+
+```
+
+
+```{r}
+# task 3
+library(stringr)
+base_burrito <- 6.50
+main_ingredient <- "steak"
+
+if(str_detect(main_ingredient,"veggie")){
+  print(base_burrito)
+}else if(str_detect(main_ingredient,"chicken")){
+  print(base_burrito + 3)
+}else {
+  print(base_burrito + 3.25)
+}
+
+
+
+
+
+
+```
+
+# For Loops
+
+```{r}
+library(stringr)
+
+fish <- c(8, 10, 12, 23)
+species <-c("goldish","tetras","guppies","mollies")
+
+
+i 
+for(i in seq_along(fish)){
+fish_prop <- (fish[i]/sum(fish))
+print(paste0(fish_prop,"-", species[i]))
+}
+
+```
+```{r}
+# Task 5
+
+month.name
+month.name[5]
+
+for(i in seq_along(month.name)){
+  print(paste(month.name,"is month", i))
+}
+
+
+
+
+
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
